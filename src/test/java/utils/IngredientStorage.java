@@ -29,8 +29,8 @@ public class IngredientStorage {
             IngredientsResponse response = mapper.readValue(responseBody, IngredientsResponse.class);
 
             // Проверяем, что сервер вернул успех и список не пустой
-            if (response.isSuccess() && response.getIngredients() != null) {
-                for (Ingredient ing : response.getIngredients()) {
+            if (response.isSuccess() && response.getData() != null) {
+                for (Ingredient ing : response.getData()) {
                     ingredientIds.add(ing.getId());
                 }
                 isLoaded = true;

@@ -6,7 +6,8 @@ import java.util.List;
 @JsonIgnoreProperties(ignoreUnknown = true)
 public class IngredientsResponse {
     private boolean success;
-    private List<Ingredient> ingredients;
+
+    private List<Ingredient> data;
 
     public boolean isSuccess() {
         return success;
@@ -16,11 +17,11 @@ public class IngredientsResponse {
         this.success = success;
     }
 
-    public List<Ingredient> getIngredients() {
-        return ingredients;
+    public List<Ingredient> getData() {
+        return data;
     }
 
-    public void setIngredients(List<Ingredient> ingredients) {
-        this.ingredients = ingredients;
+    public void setData(List<Ingredient> ingredients) {
+        this.data = ingredients;
     }
 }
